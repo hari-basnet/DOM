@@ -1,0 +1,21 @@
+
+body {
+
+    margin-left: 50px;
+}
+
+.todos-wrapper {
+
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.todos-wrapper > li{
+
+    margin-right: 10px;
+}
+
+.todos-wrapper button{
+
+    margin: 15px;
+}

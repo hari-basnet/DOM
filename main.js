@@ -1,4 +1,3 @@
-
     const todos = ['Task 1', 'Task 2', 'Task 3'];
     const todosWrapper = document.querySelector('.todos-wrapper');
     const addButton = document.querySelector('#add-button');
