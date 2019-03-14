@@ -1,21 +1,57 @@
 
 body {
-
-    margin-left: 50px;
+    margin: 20px;
 }
 
-.todos-wrapper {
+#add-button{
+
+    height: 30px;
+    border-radius: 10%;
+    margin-left: 20px;
+    color: purple;
+    background-color: chartreuse;
+}
+
+input{
+
+    width: 150px;
+    height: 20px;
+}
+
+.tasks-wrapper {
 
     display: flex;
     flex-flow: column wrap;
 }
 
-.todos-wrapper > li{
+.tasks-wrapper > li{
 
     margin-right: 10px;
 }
 
-.todos-wrapper button{
+.tasks-wrapper button{
 
     margin: 15px;
+    height: 30px;
+    border-radius: 10%;
+}
+
+.edit-button{
+
+    margin: 15px;
+    height: 30px;
+    border-radius: 10%;
+    color: purple;
+    background-color: orange;
+
+}
+
+.delete-button{
+
+    margin: 15px;
+    height: 30px;
+    border-radius: 10%;
+    color: purple;
+    background-color: yellow;
+
 }

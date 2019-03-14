@@ -1,34 +1,49 @@
 //creating variables for the html elements 
 
-const todos = ['Task1', 'Task2', 'Task3', 'Task4'];
-const todosWrapper = document.querySelector('.todos-wrapper');
+const tasks = ['Task1', 'Task2', 'Task3', 'Task4'];
+const tasksWrapper = document.querySelector('.tasks-wrapper');
 const input = document.querySelector('input');
 const addButton = document.querySelector('#add-button');
 
 
-const displayTodos = () => {
+const displayTasks = () => {
 
-    todos.forEach((todos, index) => {
+    tasks.forEach((tasks) => {
         let taskList = document.createElement('li');
-        taskList.textContent = todos;
-
-        let addButton = document.createElement('button');
-        addButton.textContent = 'Add Task';
+        taskList.textContent = tasks;
 
         let editButton = document.createElement('button');
         editButton.textContent = 'Edit Task';
+        editButton.setAttribute('class', 'edit-button');
 
         let deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete Task';
+        deleteButton.setAttribute('class', 'delete-button');
 
-        taskList.appendChild(addButton);
         taskList.appendChild(editButton);
         taskList.appendChild(deleteButton);
-        todosWrapper.appendChild(taskList);
+        tasksWrapper.appendChild(taskList);
     });
 
 }
 
+const  addTask = (task) => {
+    if(input.value != ''){
+        tasks.push(task);
+    }
+    displayTasks();
+}
 
-displayTodos();
+
+// Event listeners 
+
+addButton.addEventListener('click', () =>{
+    tasksWrapper.textContent = '';
+    addTask(input.value);
+    input.value = '';
+
+});
+
+
+displayTasks();
 
